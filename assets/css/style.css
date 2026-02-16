@@ -1633,34 +1633,34 @@ a[href*="cat=Word"] .genre-icon {
 }
 
 /* Footer Styles */
-.playnetiq-footer {
+.playfrenzee-footer {
   background: var(--footer-bg);
   color: var(--dark-color);
   padding: 2rem 0;
   position: relative;
 }
 
-.playnetiq-footer .footer-brand {
+.playfrenzee-footer .footer-brand {
   text-align: left;
 }
 
-.playnetiq-footer .footer-logo {
+.playfrenzee-footer .footer-logo {
   font-size: 2rem;
   color: var(--secondary-color);
 }
 
-.playnetiq-footer .footer-brand-name {
+.playfrenzee-footer .footer-brand-name {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--dark-color);
 }
 
-.playnetiq-footer .footer-tagline {
+.playfrenzee-footer .footer-tagline {
   font-size: 0.9rem;
   color: var(--muted-color);
 }
 
-.playnetiq-footer .payment-methods .payment-badge {
+.playfrenzee-footer .payment-methods .payment-badge {
   display: inline-block;
   background: var(--secondary-color);
   color: var(--white-color);
@@ -1670,50 +1670,50 @@ a[href*="cat=Word"] .genre-icon {
   margin-right: 0.5rem;
 }
 
-.playnetiq-footer .footer-section-title {
+.playfrenzee-footer .footer-section-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-.playnetiq-footer .footer-links {
+.playfrenzee-footer .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.playnetiq-footer .footer-links .footer-link {
+.playfrenzee-footer .footer-links .footer-link {
   color: var(--dark-color);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-.playnetiq-footer .footer-links .footer-link:hover {
+.playfrenzee-footer .footer-links .footer-link:hover {
   color: var(--secondary-color);
 }
 
-.playnetiq-footer .footer-love-message {
+.playfrenzee-footer .footer-love-message {
   font-size: 0.9rem;
   color: var(--muted-color);
 }
 
-.playnetiq-footer .footer-divider {
+.playfrenzee-footer .footer-divider {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-.playnetiq-footer .footer-social .social-link {
+.playfrenzee-footer .footer-social .social-link {
   color: var(--dark-color);
   font-size: 1.2rem;
   margin-right: 0.5rem;
   transition: color 0.3s ease;
 }
 
-.playnetiq-footer .footer-social .social-link:hover {
+.playfrenzee-footer .footer-social .social-link:hover {
   color: var(--secondary-color);
 }
 
-.playnetiq-footer .footer-copyright {
+.playfrenzee-footer .footer-copyright {
   font-size: 0.8rem;
   color: var(--muted-color);
 }
