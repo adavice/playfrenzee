@@ -1426,55 +1426,55 @@ html {
 
 /* Genre-specific icon backgrounds using href attributes */
 a[href*="cat=Family"] .genre-icon {
-  background: linear-gradient(135deg, #28a745, #20c997);
+  background: linear-gradient(135deg, #28a745);
 }
 
 a[href*="cat=Puzzle"] .genre-icon {
-  background: linear-gradient(135deg, #6f42c1, #e83e8c);
+  background: linear-gradient(135deg, #6f42c1);
 }
 
 a[href*="cat=Endless"] .genre-icon {
-  background: linear-gradient(135deg, #fd7e14, #ffc107);
+  background: linear-gradient(135deg, #fd7e14);
 }
 
 a[href*="cat=Action"] .genre-icon {
-  background: linear-gradient(135deg, #dc3545, #fd5e53);
+  background: linear-gradient(135deg, #dc3545);
 }
 
 a[href*="cat=Kids"] .genre-icon {
-  background: linear-gradient(135deg, #17a2b8, #20c997);
+  background: linear-gradient(135deg, #17a2b8);
 }
 
 a[href*="cat=Sports"] .genre-icon {
-  background: linear-gradient(135deg, #28a745, #198754);
+  background: linear-gradient(135deg, #28a745);
 }
 
 a[href*="cat=Big%20kids"] .genre-icon {
-  background: linear-gradient(135deg, #6610f2, #6f42c1);
+  background: linear-gradient(135deg, #6610f2);
 }
 
 a[href*="cat=Strategy"] .genre-icon {
-  background: linear-gradient(135deg, #495057, #6c757d);
+  background: linear-gradient(135deg, #495057);
 }
 
 a[href*="cat=Educational"] .genre-icon {
-  background: linear-gradient(135deg, #0d6efd, #0056b3);
+  background: linear-gradient(135deg, #0d6efd);
 }
 
 a[href*="cat=Adventure"] .genre-icon {
-  background: linear-gradient(135deg, #198754, #157347);
+  background: linear-gradient(135deg, #198754);
 }
 
 a[href*="cat=Young%20Kids"] .genre-icon {
-  background: linear-gradient(135deg, #ff9800, #f57c00);
+  background: linear-gradient(135deg, #ff9800);
 }
 
 a[href*="cat=Platformer"] .genre-icon {
-  background: linear-gradient(135deg, #fd7e14, #e55a4f);
+  background: linear-gradient(135deg, #fd7e14);
 }
 
 a[href*="cat=Match%203"] .genre-icon {
-  background: linear-gradient(135deg, #e83e8c, #d63384);
+  background: linear-gradient(135deg, #e83e8c);
 }
 
 a[href*="cat=Board"] .genre-icon {
