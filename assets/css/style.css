@@ -1478,19 +1478,19 @@ a[href*="cat=Match%203"] .genre-icon {
 }
 
 a[href*="cat=Board"] .genre-icon {
-  background: linear-gradient(135deg, #795548, #8d6e63);
+  background: linear-gradient(135deg, #795548);
 }
 
 a[href*="cat=Multiplayer"] .genre-icon {
-  background: linear-gradient(135deg, #9c27b0, #673ab7);
+  background: linear-gradient(135deg, #9c27b0);
 }
 
 a[href*="cat=Memory"] .genre-icon {
-  background: linear-gradient(135deg, #ff5722, #ff9800);
+  background: linear-gradient(135deg, #ff5722);
 }
 
 a[href*="cat=Word"] .genre-icon {
-  background: linear-gradient(135deg, #607d8b, #455a64);
+  background: linear-gradient(135deg, #607d8b);
 }
 
 .genre-card:hover .genre-icon {
