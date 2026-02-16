@@ -1951,7 +1951,7 @@ a[href*="cat=Word"] .genre-icon {
 }
 
 .address-image {
-  margin-left: -5px;
+  margin-top: 5px;
   mix-blend-mode: darken;
 }
 
