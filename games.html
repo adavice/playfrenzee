@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Games</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WVZPCLL");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta
+      name="keywords"
+      content="games, car games, html5 games, new games, fun games, cool games, play games, best games,
+       Skill games, Classic games,  quiz,  skill,  educational,  shooting,  casino,  bubble-shooter,  dress-up,  adventure,  time-management,  Mind games,  sports,  tower-defense,  racing,  animals,  strategy,  arcade,  platform,   board-and-card,  action, "
+    />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <link rel="shortcut icon" href="./favicon.png" />
+    <meta name="theme-color" content="#7678ef" />
+    <!-- css -->
+    <link
+      href="./assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="./assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- GSAP Libraries -->
+    <script src="./assets/js/libs/gsap/gsap.min.js"></script>
+    <script src="./assets/js/libs/gsap/ScrollTrigger.min.js"></script>
+    <!--// css -->
+  </head>
+  <body style="min-height: 100vh; display: flex; flex-direction: column">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WVZPCLL"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-gamepad me-2"></i>Playnetiq
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./games.html">
+                <i class="fas fa-gamepad me-1"></i>Games
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contactus.html">
+                <i class="fas fa-envelope me-1"></i>Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cancel.html">
+                <i class="fas fa-credit-card me-1"></i>Cancel Subscription
+              </a>
+            </li>
+          </ul>
+
+                    <div class="d-flex">
+            <!-- Login Button -->
+            <div class="login-btn">
+              <a class="btn btn-outline-light me-2" href="./login.html">
+                <i class="fas fa-right-to-bracket"></i> Login
+              </a>
+              <a class="btn btn-outline-light me-2" href="./signup.html">
+                <i class="fas fa-user-plus"></i> Signup
+              </a>
+            </div>
+            <!-- logout block -->
+            <div class="logout-btn d-none">
+              <span class="user-id" id="user_id"></span>
+              <a class="btn btn-outline-light me-2" href="/?delcookie=1">
+                <i id="logout" class="fas fa-user-plus"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="content">
+    <!-- gallery -->
+    <div class="gallery-ltpwrlayouts py-5 grey-section" id="gallery">
+      <div class="container">
+        <!-- Page Header -->
+        <div class="text-center mb-5">
+          <h2 class="display-4 text-white fw-bold mb-3">
+            <i class="fas fa-gamepad me-3"></i>Game Library
+          </h2>
+          <p class="color-secondary">
+            Discover thousands of games across all categories
+          </p>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="border-0 mb-4">
+          <div class="card-body p-4">
+            <h3 class="card-title mb-3">
+              <i class="fas fa-th-large me-2"></i>Browse by Category
+            </h3>
+            <div class="category-container">
+              <div
+                class="category-cloud d-flex flex-wrap gap-2 justify-content-center"
+              >
+                <a href="/?page=games" class="category-tag active">
+                  <i class="fas fa-home me-1"></i>All Games
+                </a>
+                <a href="/?page=games&cat=Casual" class="category-tag">
+                  <i class="fas fa-coffee me-1"></i>Casual Games
+                </a>
+                <a href="/?page=games&cat=Family" class="category-tag">
+                  <i class="fas fa-users me-1"></i>Family Time
+                </a>
+                <a href="/?page=games&cat=Puzzle" class="category-tag">
+                  <i class="fas fa-puzzle-piece me-1"></i>Brain Games
+                </a>
+                <a href="/?page=games&cat=Endless" class="category-tag">
+                  <i class="fas fa-infinity me-1"></i>Endless Mode
+                </a>
+                <a href="/?page=games&cat=Action" class="category-tag">
+                  <i class="fas fa-fist-raised me-1"></i>Action Zone
+                </a>
+                <a href="/?page=games&cat=Sports" class="category-tag">
+                  <i class="fas fa-football-ball me-1"></i>Game On
+                </a>
+                <a href="/?page=games&cat=Strategy" class="category-tag">
+                  <i class="fas fa-chess me-1"></i>Strategy Lab
+                </a>
+                <a href="/?page=games&cat=Educational" class="category-tag">
+                  <i class="fas fa-graduation-cap me-1"></i>Smart Play
+                </a>
+                <a href="/?page=games&cat=Adventure" class="category-tag">
+                  <i class="fas fa-map me-1"></i>Adventure Quest
+                </a>
+                <a href="/?page=games&cat=Platformer" class="category-tag">
+                  <i class="fas fa-running me-1"></i>Jump & Run
+                </a>
+                <a href="/?page=games&cat=Match 3" class="category-tag">
+                  <i class="fas fa-gem me-1"></i>Match Madness
+                </a>
+                <a href="/?page=games&cat=Board" class="category-tag">
+                  <i class="fas fa-chess-board me-1"></i>Tabletop Classics
+                </a>
+                <a href="/?page=games&cat=Multiplayer" class="category-tag">
+                  <i class="fas fa-users-cog me-1"></i>Multiplayer Arena
+                </a>
+                <a href="/?page=games&cat=Memory" class="category-tag">
+                  <i class="fas fa-brain me-1"></i>Memory Challenge
+                </a>
+                <a href="/?page=games&cat=Word" class="category-tag">
+                  <i class="fas fa-font me-1"></i>Word
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="border-0">
+          <div class="card-body p-4">
+            <div class="row g-4" data-games-grid>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/obstacle-race/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Obstacle Race"
+                      />
+                      <div
+                        class="game-overlay d-flex flex-column justify-content-center align-items-center"
+                      >
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/monsters-and-cake/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Monsters and Cake"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/climb-the-rock/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Climb the Rock"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/snowball-fight/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Snowball Fight"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/scrambled-words-corporate-values/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Scrambled Words"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/mad-box-zombies-toaster/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Mad Box Zombies"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/8-ball-pool-with-buddies/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="8 Ball Pool"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/bob-the-miner/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Bob the Miner"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/backgammon/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Backgammon"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/slice-of-zen/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Slice of Zen"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/burger-stacker/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Burger Stacker"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6" data-game-card>
+                <div class="game-card">
+                  <a href="/?page=game_play" class="text-decoration-none">
+                    <div class="game-image-container">
+                      <img
+                        class="img-fluid rounded game-image"
+                        src="https://cdn.marketjs.net/games/mortal-cage-fighter/localization/en/media/graphics/promo/banners/440x280.jpg"
+                        alt="Mortal Cage Fighter"
+                      />
+                      <div class="game-overlay">
+                        <p class="short-description">Short_description</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="game_list mt-5" aria-label="Game_list" data-pagination>
+              <ul class="pagination">
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </nav>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    </div>
+    </div>
+<footer class="playnetiq-footer text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Brand Section -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="footer-brand mb-3">
+              <div class="d-flex align-items-center mb-3">
+                <div class="footer-logo me-3">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h4 class="footer-brand-name mb-0">Playnetiq</h4>
+              </div>
+              <p class="footer-tagline mb-4">
+                No downloads, no ads, no interruption - just pure fun!
+              </p>
+              <div class="payment-methods">
+                <img
+                  style="max-width: 90px"
+                  src="./assets/images/vmlogo.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Section -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h5 class="footer-section-title mb-3">Info</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="./contactus.html" class="footer-link">Contact Support</a>
+              </li>
+              <li>
+                <a href="./cancel.html" class="footer-link"
+                  >Cancel Subscription</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal Section -->
+          <div class="col-lg-2 col-md-3 col-6 mb-4">
+            <h5 class="footer-section-title mb-3">Legal</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="./terms.html" class="footer-link">Terms of Service</a>
+              </li>
+              <li>
+                <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="./refund.html" class="footer-link">Refund Policy</a>
+              </li>
+              <li>
+                <a href="./subscription.html" class="footer-link"
+                  >Subscription Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Love Message -->
+          <div
+            class="col-lg-4 col-md-12 col-12 mb-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="footer-love-message text-end">
+              <p class="mb-0">
+                <i class="fas fa-heart text-success me-2"></i>
+                Made with love for gamers worldwide
+                <i class="fas fa-rocket ms-2 color-secondary"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4" />
+
+        <!-- Bottom Section -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-copyright mb-0" data-nosnippet>
+              © 2025 Playnetiq. All rights reserved.
+            </p>
+            <img
+              style="max-width: 170px; opacity: 0.6"
+              class="address-image"
+              src="./assets/images/address.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button
+      id="backToTop"
+      class="btn position-fixed bottom-0 end-0 m-4 rounded-circle d-none"
+      style="
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--white-color);
+        z-index: 1000;
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- //footer -->
+    <!-- Toast Notifications -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="errorToast"
+        class="toast align-items-center text-bg-danger border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            <!-- Error message will be dynamically inserted here -->
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- js -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/particles.js"></script>
+
+    <!-- GSAP Games Animation -->
+    <script>
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Set initial states for game cards
+      gsap.set("[data-game-card]", { 
+        y: 80, 
+        opacity: 0, 
+        rotationY: 15
+      });
+
+      // Create staggered animation for game cards
+      ScrollTrigger.create({
+        trigger: "[data-games-grid]",
+        start: "top 85%",
+        onEnter: () => {
+          gsap.to("[data-game-card]", {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotationY: 0,
+            duration: 0.6,
+            ease: "power1.inOut",
+            stagger: {
+              amount: .5,
+              from: "start",
+              grid: "auto"
+            }
+          });
+        }
+      });
+
+      // Add hover effects for game cards
+      document.querySelectorAll("[data-game-card]").forEach(card => {
+        const gameCard = card.querySelector(".game-card");
+        
+        card.addEventListener("mouseenter", () => {
+          gsap.to(gameCard, {
+            y: -10,
+            scale: 1.05,
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+        
+        card.addEventListener("mouseleave", () => {
+          gsap.to(gameCard, {
+            y: 0,
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out"
+          });
+        });
+      });
+
+      // Refresh ScrollTrigger on window resize
+      window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
+      });
+    </script>
+  </body>
+</html>

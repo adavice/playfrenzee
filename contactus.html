@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+      href="./assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Add styles for the popup -->
+    <style>
+      .center-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .center-popup-box {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25),
+          0 0 0 1px rgba(255, 255, 255, 0.1);
+        padding: 0;
+        text-align: center;
+        min-width: 380px;
+        max-width: 90vw;
+        border: 1px solid #dee2e6;
+        overflow: hidden;
+      }
+      .popup-header {
+        background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+        color: white;
+        padding: 24px 28px;
+        border-bottom: 3px solid #157347;
+        position: relative;
+      }
+      .popup-header::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.3),
+          rgba(255, 255, 255, 0.1)
+        );
+      }
+      .center-popup-box .popup-icon {
+        font-size: 3.2rem;
+        margin-bottom: 12px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        display: block;
+      }
+      .popup-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+      .popup-body {
+        padding: 32px 28px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      }
+      .center-popup-box .popup-message {
+        font-size: 1.1rem;
+        color: #495057;
+        margin: 0;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      @media (max-width: 480px) {
+        .center-popup-box {
+          min-width: 280px;
+          margin: 20px;
+        }
+        .popup-header {
+          padding: 20px 24px;
+        }
+        .popup-body {
+          padding: 24px 20px;
+        }
+        .center-popup-box .popup-icon {
+          font-size: 2.5rem;
+        }
+        .popup-title {
+          font-size: 1.2rem;
+        }
+        .center-popup-box .popup-message {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-gamepad me-2"></i>Playnetiq
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./games.html">
+                <i class="fas fa-gamepad me-1"></i>Games
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contactus.html">
+                <i class="fas fa-envelope me-1"></i>Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cancel.html">
+                <i class="fas fa-credit-card me-1"></i>Cancel Subscription
+              </a>
+            </li>
+          </ul>
+
+          <div class="d-flex">
+            <!-- Login Button -->
+            <div class="login-btn">
+              <a class="btn btn-outline-light me-2" href="./login.html">
+                <i class="fas fa-right-to-bracket"></i> Login
+              </a>
+              <a class="btn btn-outline-light me-2" href="./signup.html">
+                <i class="fas fa-user-plus"></i> Signup
+              </a>
+            </div>
+            <!-- logout block -->
+            <div class="logout-btn d-none">
+              <span class="user-id" id="user_id"></span>
+              <a class="btn btn-outline-light me-2" href="/?delcookie=1">
+                <i id="logout" class="fas fa-user-plus"></i> Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="content">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow">
+              <div class="card-header text-center">
+                <h3>Contact Us</h3>
+              </div>
+              <div class="card-body">
+                <form method="post">
+                  <input type="hidden" name="page" value="contactus" />
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input
+                        type="text"
+                        id="phone"
+                        class="form-control"
+                        name="phone"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input
+                        type="text"
+                        id="subject"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      class="form-control"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="captcha" class="form-label">Captcha</label>
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="me-3"
+                        src="data:image/gif;base64,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
+2Q==
+"
+                        width="195"
+                        height="50"
+                        style="width: 195px"
+                      />
+                      <input
+                        type="text"
+                        name="captcha"
+                        id="captcha"
+                        class="form-control"
+                        placeholder="Captcha"
+                        required
+                        maxlength="6"
+                        pattern="[A-Za-z0-9]{6}"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer text-center">
+                <small class="text-muted"
+                  >Working hours: Monday-Friday 6:00 AM - 4:00 PM (GMT)</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="playnetiq-footer text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Brand Section -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="footer-brand mb-3">
+              <div class="d-flex align-items-center mb-3">
+                <div class="footer-logo me-3">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h4 class="footer-brand-name mb-0">Playnetiq</h4>
+              </div>
+              <p class="footer-tagline mb-4">
+                No downloads, no ads, no interruption - just pure fun!
+              </p>
+              <div class="payment-methods">
+                <img
+                  style="max-width: 90px"
+                  src="./assets/images/vmlogo.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Section -->
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-4">
+            <h5 class="footer-section-title mb-3">Info</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="./contactus.html" class="footer-link"
+                  >Contact Support</a
+                >
+              </li>
+              <li>
+                <a href="./cancel.html" class="footer-link"
+                  >Cancel Subscription</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal Section -->
+          <div class="col-lg-2 col-md-3 col-sm-6 mb-4">
+            <h5 class="footer-section-title mb-3">Legal</h5>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="./terms.html" class="footer-link">Terms of Service</a>
+              </li>
+              <li>
+                <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="./refund.html" class="footer-link">Refund Policy</a>
+              </li>
+              <li>
+                <a href="./subscription.html" class="footer-link"
+                  >Subscription Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Love Message -->
+          <div
+            class="col-lg-4 col-md-12 mb-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="footer-love-message text-end">
+              <p class="mb-0">
+                <i class="fas fa-heart text-success me-2"></i>
+                Made with love for gamers worldwide
+                <i class="fas fa-rocket ms-2 color-secondary"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-4" />
+
+        <!-- Bottom Section -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-copyright mb-0" data-nosnippet>
+              © 2025 Playnetiq. All rights reserved.
+            </p>
+            <img
+              style="max-width: 170px; opacity: 0.6"
+              class="address-image"
+              src="./assets/images/address.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="center-popup-overlay d-none" id="centerPopupOverlay">
+      <div class="center-popup-box" id="centerPopupBox">
+        <div class="popup-header">
+          <div class="popup-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h4 class="popup-title">Message Sent Successfully!</h4>
+        </div>
+        <div class="popup-body">
+          <div class="popup-message">
+            Thank you for contacting us! We'll get back to you within 24 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Add script to hide popup when clicking outside -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var overlay = document.getElementById("centerPopupOverlay");
+        var box = document.getElementById("centerPopupBox");
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) {
+            overlay.classList.add("d-none");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
