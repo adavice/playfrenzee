@@ -9,9 +9,9 @@ html {
 :root {
   /* Main 5-Color Trendy Palette */
   --primary-color: #ffffff; /* Pure White - Main */
-  --secondary-color: #7678ef; /* Vibrant Indigo - Secondary */
+  --secondary-color: #4942fc; /* Vibrant Indigo - Secondary */
   --accent-color: #1a1a1a; /* Deep Charcoal - Accent */
-  --success-color: #00d4aa; /* Modern Teal - Success/Actions */
+  --success-color: #fe3786; /* Modern Teal - Success/Actions */
   --neutral-color: #f5f5f7; /* Light Gray - Backgrounds */
 
   /* Semantic Color Mappings */
