@@ -725,29 +725,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
 
-    <script>
-      function applyStickyScroll() {
-        const column = document.getElementById("rightColumn");
-        const content = document.getElementById("stickyContent");
-
-        if (!column || !content) return;
-
-        // Make it sticky
-        content.style.position = "sticky";
-        content.style.top = "0px";
-        content.style.overflowY = "auto";
-        content.style.width = "100%";
-
-        // Match height of the column
-        const columnHeight = column.offsetHeight;
-        content.style.maxHeight = columnHeight + "px";
-      }
-
-      // Run on load
-      window.addEventListener("load", applyStickyScroll);
-
-      // Recalculate on resize
-      window.addEventListener("resize", applyStickyScroll);
-    </script>
   </body>
 </html>
