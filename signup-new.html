@@ -559,26 +559,15 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <!-- Sidebar Info -->
-                  <div class="col-lg-6" style="display: flex;">
-                    <div
-                      class="p-4 d-flex flex-column mt-4"
-                      style="
-                        position: sticky;
-                        top: 0;
-                        align-self: flex-start;
-                        max-height: 100vh;
-                        overflow-y: auto;
-                        width: 100%;
-                      "
-                    >
+                  <div class="col-lg-6" id="rightColumn">
+                    <div id="stickyContent" class="p-4 d-flex flex-column mt-4">
                       <img
                         src="./assets/images/games_small.jpg"
                         alt="Games"
                         class="img-fluid mb-4 rounded"
                       />
-                  
                       <div class="text-start">
                         <h5
                           class="fw-bold mb-3"
@@ -729,5 +718,29 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
 
+    <script>
+      function applyStickyScroll() {
+        const column = document.getElementById("rightColumn");
+        const content = document.getElementById("stickyContent");
+
+        if (!column || !content) return;
+
+        // Make it sticky
+        content.style.position = "sticky";
+        content.style.top = "0px";
+        content.style.overflowY = "auto";
+        content.style.width = "100%";
+
+        // Match height of the column
+        const columnHeight = column.offsetHeight;
+        content.style.maxHeight = columnHeight + "px";
+      }
+
+      // Run on load
+      window.addEventListener("load", applyStickyScroll);
+
+      // Recalculate on resize
+      window.addEventListener("resize", applyStickyScroll);
+    </script>
   </body>
 </html>
